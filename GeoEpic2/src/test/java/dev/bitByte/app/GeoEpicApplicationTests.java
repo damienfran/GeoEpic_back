@@ -148,5 +148,12 @@ class GeoEpicApplicationTests {
 		System.out.println(location);
 	}
 	
+	@Test	//this works
+	void getAllLocations() {
+		List<Location> locations = ges.getAllLocations();
+		for (Location L:locations) {
+			System.out.println(L);
+		}
+	}
 
 }

@@ -194,4 +194,14 @@ public class GeoEpicServicesImpl implements GeoEpicServices{
 		return location;
 	}
 
+
+
+
+	@Override
+	public List<Location> getAllLocations() {
+		return (List<Location>) lr.findAll();
+		
+		
+	}
+
 }

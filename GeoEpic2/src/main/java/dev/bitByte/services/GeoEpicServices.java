@@ -32,5 +32,5 @@ public interface GeoEpicServices {
 	public Location updateLocation(Location location); // can use for changing the clue, and for moving the location
 	public Location getLocationById(int id); 
 	
-	
+	public List<Location> getAllLocations();
 }
