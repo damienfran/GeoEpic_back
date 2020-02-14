@@ -155,5 +155,13 @@ class GeoEpicApplicationTests {
 			System.out.println(L);
 		}
 	}
+	
+	@Test	//this works
+	void updateClient() {
+		Client c = ges.getClientById(25);
+		c.setScore(50);
+		c = ges.updateClient(c);
+		System.out.println(c);
+	}
 
 }
