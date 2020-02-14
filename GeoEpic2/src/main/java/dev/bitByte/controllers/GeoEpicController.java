@@ -156,6 +156,14 @@ public class GeoEpicController {
 		return ges.getAllLocations();
 	}
 	
+	//
+	@CrossOrigin(origins = {"http://localhost:4200"})
+	@ResponseBody	//Spring will automatically turn objects onto JSONS
+	@RequestMapping(value = "/getClientById", method = RequestMethod.POST)
+	public Client getClientById(@RequestBody Client client) {
+		return ges.getClientById(client.getcId());
+	}
+	
 	
 	
 }
