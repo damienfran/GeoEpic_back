@@ -14,7 +14,7 @@ public interface GeoEpicServices {
 	public Client createClient(String username, String password); // only to create clients, not managers
 	public List<Client> getAllClients();
 	public Client getClientById(int id); 
-	
+	public Client updateClient(Client client);
 	
 	//ITEMS
 	public Item createItem(Item item);

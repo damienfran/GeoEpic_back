@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import dev.bitByte.entities.Client;
@@ -157,14 +157,23 @@ public class GeoEpicController {
 		return ges.getAllLocations();
 	}
 	
+
 	//
 //	@CrossOrigin(origins = {"http://localhost:9999"})
+	//SUCCESSFUL
+	@CrossOrigin(origins = {"http://localhost:4200"})
 	@ResponseBody	//Spring will automatically turn objects onto JSONS
 	@RequestMapping(value = "/getClientById", method = RequestMethod.POST)
 	public Client getClientById(@RequestBody Client client) {
 		return ges.getClientById(client.getcId());
 	}
 	
-	
+	//SUCCESSFUL
+	@CrossOrigin(origins = {"http://localhost:4200"})
+	@ResponseBody	//Spring will automatically turn objects onto JSONS
+	@RequestMapping(value = "/updateClient", method = RequestMethod.POST)
+	public Client updateClient(@RequestBody Client client) {
+		return ges.updateClient(client);
+	}
 	
 }

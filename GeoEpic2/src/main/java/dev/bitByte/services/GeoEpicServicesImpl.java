@@ -201,6 +201,14 @@ public class GeoEpicServicesImpl implements GeoEpicServices{
 	public List<Location> getAllLocations() {
 		return (List<Location>) lr.findAll();
 		
+	}
+
+
+
+
+	@Override
+	public Client updateClient(Client client) {
+		return cr.save(client);
 		
 	}
 
