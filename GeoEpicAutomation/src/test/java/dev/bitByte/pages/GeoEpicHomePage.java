@@ -31,4 +31,7 @@ public class GeoEpicHomePage {
 	
 	@FindBy(xpath = "/html/body/app-root/app-login/html/nav/button[1]")
 	public WebElement goToLocationButton;
+	
+	@FindBy(xpath = "/html/body/app-root/app-login/html/nav/button[3]")
+	public WebElement logout; 
 }

@@ -105,5 +105,16 @@ public class GeoEpicLoginSteps {
 		//this should be visually verified
 	}
 	
+	@Given("^The user is on the Treasure Swap Page$")
+	public void the_user_is_on_the_Treasure_Swap_Page() throws Throwable {
+	   //this should be assured by the previous condition 
+	}
+
+	@When("^The user clicks on Logout$")
+	public void the_user_clicks_on_Logout() throws Throwable {
+	   homepage.logout.click(); 
+	   Thread.sleep(5000);
+	}
+	
 	
 }

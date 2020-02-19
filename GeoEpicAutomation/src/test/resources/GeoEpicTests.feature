@@ -20,3 +20,8 @@ Feature: Logging into GeoEpic
 		Given The user is on the Location Details Page
 		When The user clicks on the treasure Box to open it
 		Then The user is one the Treasure Swap Page
+		
+	Scenario: GeoEpic Logout 
+		Given The user is on the Treasure Swap Page 
+		When The user clicks on Logout
+		Then The user is on the GeoEpic Home Page 
