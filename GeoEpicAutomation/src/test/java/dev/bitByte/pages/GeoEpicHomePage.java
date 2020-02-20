@@ -26,7 +26,9 @@ public class GeoEpicHomePage {
 	@FindBy(xpath = "//*[@id=\"boop\"]/div/div[1]/div/div/table/tr/td[1]/button")
 	public WebElement locationOneButton;
 	
-	@FindBy(xpath = "//*[@id=\"change\"]")
+	//*[@id="border"]/div[2]/div/div/div[2]/div/div/button
+	//@FindBy(xpath = "//*[@id=\"change\"]")
+	@FindBy(xpath = "//*[@id=\"border\"]/div[2]/div/div/div[2]/div/div/button")
 	public WebElement pokeBoxButton;
 	
 	@FindBy(xpath = "/html/body/app-root/app-login/html/nav/button[1]")
