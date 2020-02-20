@@ -16,12 +16,12 @@ public class GeoEpicLoginSteps {
 	public static WebDriver driver = GeoEpicRunner.driver;
 	public static GeoEpicHomePage homepage = GeoEpicRunner.homepage;
 	
-	
 
 	@Given("^The user is on the GeoEpic Home Page$")
 	public void the_user_is_on_the_GeoEpic_Home_Page() throws Throwable {
 		driver.get("http://geoepic.com.s3-website.us-east-2.amazonaws.com/");
 
+//		driver.get("http://localhost:4200/");
 
 	}
 
@@ -36,8 +36,9 @@ public class GeoEpicLoginSteps {
 	@Then("^The user should be logged in and take to the myStats page$")
 	public void the_user_should_be_logged_in_and_take_to_the_myStats_page() throws Throwable {
 
+		
 		Thread.sleep(5000); // visually verify that on correct page
-		Assert.assertEquals(true, true);
+		Assert.assertEquals("GeoEpic - MyStats", driver.getTitle());
 
 	}
 	
@@ -74,10 +75,10 @@ public class GeoEpicLoginSteps {
 		
 	}
 
-	@Then("^The user is one the Treasure Swap Page$")
-	public void the_user_is_one_the_Treasure_Swap_Page() throws Throwable {
+	@Then("^The user is on the Treasure Swap Page$")
+	public void the_user_is_on_the_Treasure_Swap_Page() throws Throwable {
 		Thread.sleep(5000);//visually confirm that on right page
-		Assert.assertEquals(true, true);
+		Assert.assertEquals("GeoEpic - Treasure Swap", driver.getTitle());
 
 	}
 	
@@ -96,7 +97,7 @@ public class GeoEpicLoginSteps {
 	@Then("^The user gets to the Location Picker page$")
 	public void the_user_gets_to_the_Location_Picker_page() throws Throwable {
 		Thread.sleep(5000); // visually confirm
-		Assert.assertEquals(true, true);
+		Assert.assertEquals("GeoEpic - Location Picker", driver.getTitle());
 
 	}
 
@@ -105,11 +106,6 @@ public class GeoEpicLoginSteps {
 		//this should be visually verified
 	}
 	
-	@Given("^The user is on the Treasure Swap Page$")
-	public void the_user_is_on_the_Treasure_Swap_Page() throws Throwable {
-	   //this should be assured by the previous condition 
-	}
-
 	@When("^The user clicks on Logout$")
 	public void the_user_clicks_on_Logout() throws Throwable {
 	   homepage.logout.click(); 

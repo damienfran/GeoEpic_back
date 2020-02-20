@@ -19,7 +19,7 @@ Feature: Logging into GeoEpic
 	Scenario: Treasure Swap Screen
 		Given The user is on the Location Details Page
 		When The user clicks on the treasure Box to open it
-		Then The user is one the Treasure Swap Page
+		Then The user is on the Treasure Swap Page
 		
 	Scenario: GeoEpic Logout 
 		Given The user is on the Treasure Swap Page 
